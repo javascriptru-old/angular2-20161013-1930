@@ -3,7 +3,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App: Forms', () => {
+describe('App: Lesson6router', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

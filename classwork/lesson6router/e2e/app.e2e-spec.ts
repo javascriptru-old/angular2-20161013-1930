@@ -1,10 +1,10 @@
-import { FormsPage } from './app.po';
+import { Lesson6routerPage } from './app.po';
 
-describe('forms App', function() {
-  let page: FormsPage;
+describe('lesson6router App', function() {
+  let page: Lesson6routerPage;
 
   beforeEach(() => {
-    page = new FormsPage();
+    page = new Lesson6routerPage();
   });
 
   it('should display message saying app works', () => {
