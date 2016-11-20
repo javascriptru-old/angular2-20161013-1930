@@ -33,6 +33,7 @@ export class ReactiveFormsComponent implements OnInit {
   // }
 
   ngOnInit() {
+    let a = 1;
     this.username.valueChanges
     //.debounceTime(500)
     //.switchMap(value => this._userService.getUsersByFilter(value))

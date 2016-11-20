@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { AsyncValidationComponent } from './async-validation/async-validation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    AsyncValidationComponent
   ],
   imports: [
     BrowserModule,
