@@ -49,7 +49,7 @@
   </div>
 
 
-  <div class="panel panel-default" *ngFor="let user of users | userName: pipesForm.controls.name.value | userAge: pipesForm.controls.age.value">
+  <div class="panel panel-default" *ngFor="let user of users|async | userName: pipesForm.controls.name.value | userAge: pipesForm.controls.age.value">
     <div class="panel-heading">
       <h3 class="panel-title">{{user.name}}</h3>
     </div>

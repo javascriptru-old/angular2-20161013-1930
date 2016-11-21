@@ -23,7 +23,7 @@ export class UsersService {
   }
 
   public getUsersByFilter(filterObj): Observable<IUser[]> {
-    return Observable.of(this._users.filter(function (user:IUser) {
+    return Observable.of(this._users.filter((user:IUser) => {
       for (var param in user) {
         let filterValue = filterObj[param].toLowerCase();
         let userValue = user[param].toLowerCase();

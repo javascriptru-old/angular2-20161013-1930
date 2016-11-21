@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let log of logs">
+    <code>{{ log }}</code>
+  </li>
+</ul>
+
+<app-child *ngIf="showChild" [name]="name" (log)="onLog($event)"></app-child>

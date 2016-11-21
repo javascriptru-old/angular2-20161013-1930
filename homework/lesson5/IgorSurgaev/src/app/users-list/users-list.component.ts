@@ -28,9 +28,8 @@ export class UsersListComponent {
         'firstname': ['']
     });
 
-    this.filtersForm.valueChanges
-        .subscribe(filters => this.getUsersByFilters(filters));
-
+    this.users = this.filtersForm.valueChanges
+      .switchMap(filters => this.getUsersByFilters(filters))
   };
 
   getUsers() {
@@ -40,9 +39,8 @@ export class UsersListComponent {
   }
 
   getUsersByFilters(filters) {
-    this._usersService.getUsersByFilter(filters)
+    return this._usersService.getUsersByFilter(filters)
         .startWith(null)
-        .subscribe(filteredUsers => this.users = Observable.of(filteredUsers));
   }
 
 
