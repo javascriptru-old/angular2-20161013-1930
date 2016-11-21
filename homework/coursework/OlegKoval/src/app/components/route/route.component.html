@@ -1,0 +1,35 @@
+<div class="panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <h2 class="center">{{routeProp.display_name}}</h2>
+        </div>
+        <div class="row">
+            <sebm-google-map [latitude]="gmapCenterLat" [longitude]="gmapCenterLng" [zoom]="gmapZoom">
+                <sebm-google-map-marker *ngFor="let vehicle of vehicles" 
+                    [latitude]="vehicle.latitude" 
+                    [longitude]="vehicle.longitude" 
+                    [label]="vehicle.label">
+                    <sebm-google-map-info-window [disableAutoPan]="true">
+                        Vehicle ID: {{vehicle.id}}
+                    </sebm-google-map-info-window>
+                </sebm-google-map-marker>
+
+                <sebm-google-map-polyline>
+                    <sebm-google-map-polyline-point
+                        *ngFor="let point of stops"
+                        [latitude]="point.latitude" 
+                        [longitude]="point.longitude">
+                    </sebm-google-map-polyline-point>
+                </sebm-google-map-polyline>
+
+                <sebm-google-map-circle *ngFor="let point of stops" 
+                    [latitude]="point.latitude" 
+                    [longitude]="point.longitude" 
+                    [radius]="100" 
+                    [fillColor]="routeProp.bg_color" 
+                    [fillOpacity]="1.0">
+                </sebm-google-map-circle>
+            </sebm-google-map>
+        </div>
+    </div>
+</div>

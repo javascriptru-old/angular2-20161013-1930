@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-horizontal">
+    <div class="form-group required" [class.has-error]="!firstNameValid">
+        <input class="form-control" placeholder="First Name" formControlName="firstname">
+    </div>
+    <div class="form-group" [class.has-error]="!lastNameValid">
+        <input class="form-control" placeholder="Last Name" formControlName="lastname">
+    </div>
+    <div class="form-group" [class.has-error]="!emailValid">
+        <input class="form-control" placeholder="Email" formControlName="email">
+    </div>
+    <div class="form-group" [class.has-error]="!messageValid">
+        <textarea class="form-control" rows="3" placeholder="Message" formControlName="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default" [disabled]="!form.valid">Submit</button>
+</form>
