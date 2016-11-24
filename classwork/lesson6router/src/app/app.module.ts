@@ -19,7 +19,8 @@ const routes = [
     // canDeactivate: function():boolean {
     //   return window.confirm('You have unsaved changes. Still wonna go?')
     // }
-  }
+  },
+  {path: 'later', loadChildren: 'app/later/later.module#LaterModule'}
 ];
 
 /*
