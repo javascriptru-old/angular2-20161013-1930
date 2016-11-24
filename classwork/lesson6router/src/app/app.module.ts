@@ -20,7 +20,8 @@ const routes = [
     //   return window.confirm('You have unsaved changes. Still wonna go?')
     // }
   },
-  {path: 'later', loadChildren: 'app/later/later.module#LaterModule'}
+  {path: 'later', loadChildren: 'app/later/later.module#LaterModule'},
+  {path: 'later2', loadChildren: 'app/later2/later2.module#Later2Module'}
 ];
 
 /*
